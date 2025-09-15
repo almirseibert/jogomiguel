@@ -7,16 +7,8 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-}
-
-.game-container {
-    width: 80%;
-    max-width: 600px;
-    padding: 20px;
-    background-color: #1a2a1a;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    text-align: center;
+    flex-direction: column;
+    overflow: hidden; /* Evita a barra de rolagem */
 }
 
 #title {
@@ -24,27 +16,14 @@ body {
     text-shadow: 2px 2px 4px #000000;
     font-family: 'Creepster', cursive;
     font-size: 2.5em;
-}
-
-#story-text {
-    font-size: 1.2em;
-    line-height: 1.6em;
     margin-bottom: 20px;
+    z-index: 10;
+    position: relative;
 }
 
-#choices button {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    background-color: #2e4a2e;
-    color: #c0c0c0;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
-}
-
-#choices button:hover {
-    background-color: #4a664a;
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
